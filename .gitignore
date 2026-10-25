@@ -1,0 +1,36 @@
+# Release assets are uploaded to GitHub Releases, never committed to Git
+*.exe
+*.msi
+*.msix
+*.dll
+*.pdb
+*.nupkg
+*.snupkg
+*.zip
+*.7z
+*.tar
+*.gz
+
+# Cryptographic signing material: do not commit even when used for testing
+*.pem
+*.key
+*.pfx
+*.p12
+*.p8
+
+# Locally generated release data and temporary downloads
+/artifacts/
+/dist/
+/out/
+/staging/
+/tmp/
+*.partial
+loopgolem-update.json
+SHA256SUMS.txt
+
+# Local IDE/OS files
+.vs/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
