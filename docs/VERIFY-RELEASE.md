@@ -1,12 +1,10 @@
 # Verifying an official LoopGolem release
 
-**No production release or signing key is published yet.** The steps below apply only after Nancode has approved a release and published an independently authenticated public signing key/fingerprint.
-
 Download the installer and `loopgolem-update.json` from the **assets attached to the same release** on [GitHub Releases](https://github.com/LoopGolem/loopgolem-releases/releases).
 
 ## What is verified?
 
-An official in-app update uses a pinned publisher key to authenticate a signed payload and checks the exact installer bytes against it. The payload contains the repository, product, publisher, Windows x64 target, version, filename, size, SHA-256 digest and expiry. All fields must agree with the intended installed application.
+An official in-app update uses a pinned publisher key to authenticate a signed payload and checks the exact installer bytes against it. The payload contains the repository, product, publisher, Windows x64 target, version, filename, size, SHA-256 digest and expiry. Stable schema 2 also binds the SHA-256 of the bundled legal catalog. All fields must agree with the intended installed application.
 
 **Important:** a checksum and a public key copied from the same untrusted download location do not, by themselves, authenticate the publisher. Obtain the expected public-key fingerprint through a separately trusted publisher channel before accepting a release. Never use a public key supplied solely by an unverified manifest.
 
