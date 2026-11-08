@@ -15,6 +15,8 @@ The updater derives the installer and manifest download URLs from the release ta
 
 The JSON envelope contains `keyId`, base64-encoded `payload` (the exact UTF-8 bytes signed) and `signature`. The signed payload binds the release to its canonical version, publisher (`Nancode`), LoopGolem product identity, repository (`LoopGolem/loopgolem-releases`), Windows x64 platform, exact filename, byte count, SHA-256, and issue/expiry dates. The signature uses **ECDSA P-256 / SHA-256, IEEE P1363 (64 bytes)**. A release page or an unverified checksum alone is not proof of publisher authenticity.
 
+Stable releases use schema 2, which also signs the SHA-256 of the legal catalog bundled in the installer.
+
 ## Checklist before publishing
 
 1. **Approval and licensing:** explicitly approve public distribution and the applicable application terms. Public visibility does not grant an open-source license.
@@ -42,5 +44,3 @@ The JSON envelope contains `keyId`, base64-encoded `payload` (the exact UTF-8 by
 - Never substitute different installer bytes under an existing version. A renewed signed manifest may reference the **same immutable installer bytes**.
 - Inno Setup updates are not atomic rollbacks. Back up state and qualify bootstrap/upgrade/recovery in a disposable Windows VM or GitHub-hosted runner before introducing real users.
 - Running, paused, and otherwise recoverable missions must not be interrupted simply to install an update. User consent is required to install.
-
-**Current status:** publication infrastructure and the production signing root are not yet provisioned. This document is a policy, **not** an indication that any installer is currently verified or available.

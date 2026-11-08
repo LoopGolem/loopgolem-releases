@@ -2,21 +2,17 @@
 
 This is the **public, binary-only distribution repository** for **LoopGolem**, published by **Nancode**.
 
-> **Status:** Distribution infrastructure is being prepared. No installer is approved for public release yet.
-
 ## Downloads
 
-Approved installers will appear in [GitHub Releases](https://github.com/LoopGolem/loopgolem-releases/releases) when available. Only download files from the release assets of this repository.
-
-A Windows x64 release is expected to contain:
+LoopGolem 1.0.0 is the stable release for Windows x64. Get the installer from the release assets. The Nancode product page provides installation instructions, the EULA, the privacy policy and support details. [Stable release](https://github.com/LoopGolem/loopgolem-releases/releases/tag/v1.0.0) · [Nancode product page](https://nancode.com.br/pt/loopgolem/)
 
 | Release asset | Purpose |
 | --- | --- |
 | `LoopGolem-<version>-win-x64-setup.exe` | Windows installer |
 | `loopgolem-update.json` | Detached, cryptographically signed update manifest |
-| Optional checksums / release notes | Human inspection and release information |
+| `SHA256SUMS.txt` | SHA-256 checksums for the installer and manifest |
 
-Release tags use `v<version>` (for example, `v0.1.0-preview.9`). Versions shown here are illustrative, **not published releases**.
+Release tags use `v<version>`. To migrate from preview.10 through preview.13, back up your data and follow the interactive installation steps in the stable release notes.
 
 ## Update security
 
